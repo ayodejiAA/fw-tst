@@ -1,0 +1,36 @@
+{
+  "name": "rule-validation-api",
+  "version": "1.0.0",
+  "description": "A simple rule-validation API",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./server/**/*.js",
+    "start": "node ./build",
+    "dev": "cross-env DEBUG=app:* nodemon -x babel-node ./server",
+    "build": "rm -rf build && babel server -d build"
+  },
+  "author": "Ayodeji Afolabi",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^4.3.1",
+    "express": "^4.17.1",
+    "joi": "^17.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "nodemon": "^2.0.7"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}
