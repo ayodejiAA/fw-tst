@@ -5,16 +5,16 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./server/**/*.js",
-    "start": "node ./build",
+    "start": "cross-env DEBUG=app:* node ./build",
     "dev": "cross-env DEBUG=app:* nodemon -x babel-node ./server",
     "build": "rm -rf build && babel server -d build"
   },
   "author": "Ayodeji Afolabi",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "debug": "^4.3.1",
-    "express": "^4.17.1",
-    "joi": "^17.3.0"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -24,7 +24,6 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/register": "^7.8.3",
     "babel-eslint": "^10.0.3",
-    "cross-env": "^7.0.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.1",
