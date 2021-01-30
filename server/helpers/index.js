@@ -47,7 +47,7 @@ export function validateDataAndReturnFieldValue(body) {
   for (const idx in fields) {
     field = fields[idx];
     fieldValue = fieldValue[fields[idx]];
-    if (!fieldValue) throw new Error(`field ${field} is missing from data.`);
+    if (!fieldValue) throw new Error(`field ${rule.field} is missing from data.`);
   }
 
   // Return specific field and value
